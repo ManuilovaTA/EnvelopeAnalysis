@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace EnvelopeAnalysis
 {
-    class Envelope
+    public class Envelope
     {
-        double a;
+        public double a;
         public double Input()
-        {            
-                if(!double.TryParse(Console.ReadLine(), out a))
-                {
-                    Console.WriteLine("Ошибка. Вы ввели не число \n Введите повторно:");
+        {
+            if (!double.TryParse(Console.ReadLine(), out a))
+            {
+                Console.WriteLine("Ошибка. Вы ввели не число \n Введите повторно:");
                 Input();
-                }
+            }
             if (a <= 0)
             {
                 Console.WriteLine("Ошибка. Вы ввели отрицатльное число \n Введите повторно:");
